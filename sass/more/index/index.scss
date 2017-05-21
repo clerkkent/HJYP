@@ -1,49 +1,378 @@
 @import '../template/temp.scss';
-.index{
-    header{
-        width:100%;
-        height:115px;
-        background:#ffffff;
-        .top_wrap{
-             background: #f8fbff;
-              height:30px;
-              .top{
-            margin:0 auto;
-            line-height:30px;
-            width:1120px;
-            display: flex;
-            flex-flow:row wrap;
-            justify-content: space-between;
-            font-family: PingFangSC-Regular;
-            font-size: 12px;
-            color: #999999;
-            .left{
-                i{
-                display:inline-block;
-                width:30px;
-                height:30px;
-                vertical-align: middle;
-                @include backgroundset("../../images/index/ic_ipone.png",left,top,100%);
-            }
-        }
-        }
-
-            .right{
+.index {
+    header {
+        width: 100%;
+        height: 115px;
+        background: #ffffff;
+        .top_wrap {
+            background: #f8fbff;
+            height: 30px;
+            .top {
+                margin: 0 auto;
+                line-height: 30px;
+                width: 1120px;
                 display: flex;
-                flex-flow:row wrap;
-                width:400px;
+                flex-flow: row wrap;
                 justify-content: space-between;
                 font-family: PingFangSC-Regular;
-                .wechat{
-                    i{
-                display:inline-block;
-                width:30px;
-                height:30px;
-                vertical-align: middle;
-                @include backgroundset("../../images/index/Group 11.png",left,top,400%);
-            }
+                font-size: 12px;
+                color: #999999;
+                .left {
+                    i {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        vertical-align: middle;
+                        @include backgroundset("../../images/index/ic_ipone.png", left, -1px, 100%);
+                    }
                 }
             }
+            .right {
+                display: flex;
+                flex-flow: row wrap;
+                width: 400px;
+                justify-content: space-between;
+                font-family: PingFangSC-Regular;
+                .wechat {
+                    color: #999999;
+                    transition: all .5s;
+                    i {
+                        transition: all .5s;
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        vertical-align: middle;
+                        @include backgroundset("../../images/index/Group 11.png", left, 0px, 400%);
+                    }
+                }
+                .app {
+                    color: #999999;
+                    i {
+                        transition: all .5s;
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        vertical-align: middle;
+                        @include backgroundset("../../images/index/Group 11.png", right, top, 400%);
+                    }
+                }
+                .app:hover {
+                    text-decoration: none;
+                    i {
+                        background-position: right -28px;
+                    }
+                }
+                .wechat:hover {
+                    text-decoration: none;
+                    i {
+                        background-position: left -28px;
+                    }
+                }
+            }
+        }
+        .nav {
+            width: 1120px;
+            margin: 0 auto;
+            height: 82px;
+            @include backgroundset("../../images/index/Group 9.png", 10px, center, 20%);
+            a {
+                width: 20%;
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+    section {
+        width: 100%;
+        overflow: hidden;
+        h3 {
+            font-family: PingFangSC-Medium;
+            font-size: 28px;
+            color: #666666;
+            letter-spacing: 0;
+            text-align: center;
+            margin: 57px;
+            .en {
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #BFBFBF;
+                letter-spacing: 0;
+                margin: 10px;
+                position: relative;
+                span {
+                    height: 0;
+                    display: inline-block;
+                    border-top: 1px solid #D7D7D7;
+                    width: 160px;
+                    vertical-align: middle;
+                    margin: 0 20px;
+                    // position: absolute;
+                }
+            }
+        }
+        .banner_wrap {
+            width: 100%;
+            height: 408px;
+            z-index: 1;
+            background-color: rgba(black, .9);
+            .banner {
+                height: 100%;
+                margin: 0 auto;
+                width: 1265px;
+                @include backgroundset("../../images/index/banner.png", center, center, 100%);
+                position: relative;
+                p {
+                    width: 130px;
+                    height: 130px;
+                    position: absolute;
+                    left: 52%;
+                    top: 13.5%;
+                    @include backgroundset("../../images/index/land_pic.jpg", center, center, 100%)
+                }
+            }
+        }
+        .transition01 {
+            overflow: hidden;
+            height: 535px;
+            width: 1120px;
+            margin: 0 auto;
+            transition: all 0.8s;
+            top: -70px;
+            z-index: 100;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            position: relative;
+            @include backgroundset("../../images/index/Group 10.png", center, 70px, 110%);
+            background-color: #FFF;
+            box-shadow: 0px -10px 10px 10px rgba(#666, .5);
+            .details {
+                p {
+                    width: 604px;
+                    height: 43px;
+                    font-family: PingFangSC-Regular;
+                    font-size: 14px;
+                    color: #929292;
+                    letter-spacing: 0;
+                    line-height: 24px;
+                    margin: 0 auto;
+                    a {
+                        font-family: PingFangSC-Regular;
+                        font-size: 14px;
+                        color: #ff7570;
+                        letter-spacing: 0;
+                        line-height: 24px;
+                    }
+                }
+                ul {
+                    width: 890px;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    margin-top: 35px;
+                    li {
+                        width: 150px;
+                        height: 200px;
+                        transition: all 0.8s;
+                        transform: rotate(0deg);
+                        margin-top: -1000px;
+                        @include backgroundset("../../images/index/ic_Package.png", center, center, 100%);
+                        .pic {
+                            height: 145px;
+                            width: 145px;
+                            width: 150px;
+                            transition: all 0.8s;
+                        }
+                        .text {
+                            font-family: PingFangSC-Regular;
+                            font-size: 22px;
+                            color: #7A7A7A;
+                            letter-spacing: 0;
+                            text-align: center;
+                            width: 150px;
+                            margin-top: 35px;
+                        }
+                    }
+                    li:hover {
+                        transform: scale(1.2);
+                    }
+                    li:nth-child(2) {
+                        background-image: url("../../images/index/ic_Recharge.png");
+                    }
+                    li:nth-child(3) {
+                        background-image: url("../../images/index/ic_automatic.png");
+                    }
+                    li:nth-child(4) {
+                        background-image: url("../../images/index/ic_National.png");
+                    }
+                }
+            }
+        }
+        .transition02 {
+            width: 1120px;
+            margin: 0 auto;
+            position: relative;
+            height: 420px;
+            .left_p,
+            .right_p {
+                width: 610px;
+                position: absolute;
+                height: 292px;
+                transition: all 0.6s;
+                span {
+                    font-family: PingFangSC-Medium;
+                    font-size: 22px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    position: absolute;
+                    display: inline-block;
+                    left: 59px;
+                    top: 122px;
+                }
+            }
+            .left_p {
+                left: 0;
+                @include backgroundset("../../images/index/ic_VS.png",
+                center,
+                center,
+                100%);
+                bottom: 0;
+            }
+            .right_p {
+                right: 0;
+                @include backgroundset("../../images/index/ic_VS Copy.png",
+                center,
+                center,
+                100%);
+                bottom: 0;
+                span {
+                    width: 389px;
+                    height: 53px;
+                    left: 165px;
+                }
+            }
+        }
+        .transition03_wrap {
+            width: 100%;
+            background-color: #FFFBF3;
+            .transition03 {
+                width: 1120px;
+                margin: 0 auto;
+                // @include backgroundset("../../images/index/");
+                overflow: hidden;
+                margin-top: 100px;
+                position: relative;
+                height: 967px;
+                h3 {
+                    margin-top: 60px;
+                }
+                button {
+                    @include center-block;
+                    width: 338px;
+                    height: 66px;
+                    border: 1px solid #F78049;
+                    border-radius: 14px;
+                    background: none;
+                    color: #f56523;
+                    font-size: 26px;
+                    margin-bottom: 114px;
+                }
+                .app {
+                    position: absolute;
+                    width: 140px;
+                    height: 140px;
+                    @include backgroundset("../../images/index/app.jpg",
+                    center,
+                    center,
+                    100%);
+                    right: -1000px;
+                    transition: all .6s;
+                    bottom: 70px;
+                }
+            }
+        }
+    }
+    footer {
+        height: 347px;
+        background: url("../../images/index/bottom.png") center center repeat;
+        .footer_de {
+            width: 1120px;
+            height: 200px;
+            color: #FFF;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            overflow: hidden;
+            .left {
+                margin-top: 44px;
+                .con {
+                    font-family: PingFangSC-Medium;
+                    font-size: 21px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    text-indent: 40px;
+                    @include backgroundset("../../images/index/ic_mes.png",
+                    left,
+                    center,
+                    12%);
+                    margin-bottom: 16px;
+                }
+                .tel {
+                    font-family: PingFangSC-Medium;
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    letter-spacing: 1px;
+                    margin-bottom: 10px;
+                }
+                .workday {
+                    font-family: PingFangSC-Regular;
+                    font-size: 14px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                }
+            }
+            .right {
+                width: 300px;
+                position: relative;
+                .app {
+                    position: absolute;
+                    width: 115px;
+                    height: 115px;
+                    @include backgroundset("../../images/index/app1.jpg",
+                    center,
+                    center,
+                    100%);
+                    top: 34px;
+                }
+                .downtxt {
+                    width: 115px;
+                    height: 38px;
+                    line-height: 38px;
+                    @include backgroundset("../../images/index/ic_wechat.png",
+                    10px,
+                    center,
+                    20%);
+                    position: absolute;
+                    top: 150px;
+                    text-align: center;
+                    font-family: PingFangSC-Regular;
+                    font-size: 13px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                }
+            }
+        }
+        .copyright {
+            height: 50px;
+            width: 490px;
+            margin: 50px auto;
+            font-family: ArialMT;
+            font-size: 13px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 25px;
+            text-align: center;
         }
     }
 }

@@ -1,30 +1,34 @@
-// angular.module('HJY').directive("testT", function($timeout) {
-//     return {
-//         restrict: "ECMA",
-//         link: function(scope, element, attr) {
-
-//             var belong = sessionStorage.getItem("belong");
-//             var test;
-
-//         }
-//     }
-// })
-angular.module('HJY').directive("initT", function($timeout) {
+angular.module('HJY').directive("allL", function($timeout) {
     return {
         restrict: "ECMA",
         link: function(scope, element, attr) {
-            if (scope.$last === true) { //判断是否是最后一条数据  
-                $timeout(function() {
-                    scope.$emit('ngRepeatFinished'); //向父级scope传送ngRepeatFinished命令  
-                });
-            }
+            var f = 1;
+            $(".main_content").scroll(function() {
+                var h = $(".main_content").scrollTop();
+                if (h > 850) {
+                    $(".left_p").css({ left: "0" })
+                    $(".right_p").css({ right: "0" })
+                } else {
+                    $(".left_p").css({ left: "-1000px" })
+                    $(".right_p").css({ right: "-1000px" })
+                }
+
+                if (h > 200) {
+                    if (f == 1) {
+                        f = 0;
+                        $(".transition01 li").css({
+                            transform: "roateX(360deg)",
+                            marginTop: 0
+                        })
+                    }
+                } else {
+
+                }
+
+            })
+            $(".btn").mouseover(function() {
+                $(".transition03 .app").css({ right: "20%" })
+            })
         }
-    }
-})
-HJY.directive("landmainDetails", function() { //购买页，个人中心，订单页下方菜单
-    return {
-        restrict: "ECMA",
-        replace: true,
-        templateUrl: "html/funpage/popum.html"
     }
 })
