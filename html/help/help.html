@@ -1,0 +1,15 @@
+<div class="help">
+    <div class="help_menu">
+        <p ng-repeat="x in help_information" ng-click="change($index)">{{x.type}}</p>
+    </div>
+    <div class="help_text_wrap" style="height:1079px;width: 690px;overflow:hidden">
+        <ion-scroll style="height:1079px;width: 710px;" direction="y" scrollbar-y="false" class="help_text">
+            <ul>
+                <li ng-repeat="y in se">
+                    <h3>{{y.question}}</h3>
+                    <p ng-repeat="z in y.answer">{{z}}</p>
+                </li>
+            </ul>
+        </ion-scroll>
+    </div>
+</div>
