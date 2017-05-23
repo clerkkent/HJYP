@@ -16,6 +16,20 @@
     <title>会加油</title>
     <link href="css/common.css?v=1.0.0" type="text/css" rel="stylesheet" />
     <link rel="shortcut icon" href="images/bitbug_favicon.ico">
+    <script>
+        var browser = {
+            ua: navigator.userAgent.toLowerCase(),
+            ie: function() {
+                return /msie/.test(this.ua);
+            }
+        };
+        if (!browser.ie()) {
+
+        } else {
+            location.href = "http://" + location.hostname + "/update-browser.html";
+            // location.href = "http://192.168.10.189:8888" + "/update-browser.html";
+        }
+    </script>
     <!--<base href="/">-->
 </head>
 

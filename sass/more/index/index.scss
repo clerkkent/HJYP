@@ -51,15 +51,16 @@
                     }
                     .pic {
                         position: absolute;
-                        bottom: -90px;
-                        width: 120px;
+                        bottom: -80px;
+                        width: 140px;
                         height: 150px;
+                        left: 0;
                         background-color: #FFF;
                         z-index: 100;
                         display: none;
                         opacity: 0;
                         transform: scale(0);
-                        @include backgroundset("../../images/index/app1.jpg", center, center, 100%)
+                        @include backgroundset("../../images/index/gzh.jpg", center, bottom, 100%)
                     }
                 }
                 .app {
@@ -77,15 +78,16 @@
                     }
                     .pic {
                         position: absolute;
-                        bottom: -90px;
-                        width: 120px;
+                        bottom: -80px;
+                        left: 0;
+                        width: 140px;
                         height: 150px;
                         background-color: #FFF;
                         z-index: 100;
                         display: none;
                         opacity: 0;
                         transform: scale(0);
-                        @include backgroundset("../../images/index/app1.jpg", center, center, 100%)
+                        @include backgroundset("../../images/index/titleapp.jpg", center, bottom, 100%)
                     }
                 }
                 .app:hover {
@@ -96,10 +98,11 @@
                     }
                     .pic {
                         position: absolute;
-                        bottom: -90px;
+                        bottom: -70px;
+                        left: 0;
                         width: 120px;
-                        height: 150px;
-                        background-color: #FFF;
+                        height: 130px;
+                        background-color: #fff;
                         z-index: 100;
                         display: block;
                         opacity: 1;
@@ -114,9 +117,10 @@
                     }
                     .pic {
                         position: absolute;
-                        bottom: -90px;
+                        bottom: -70px;
+                        left: 0;
                         width: 120px;
-                        height: 150px;
+                        height: 130px;
                         background-color: #FFF;
                         z-index: 100;
                         display: block;
@@ -154,16 +158,17 @@
             ;
             .help_menu {
                 width: 208px;
-                height: auto;
+                height: 310px;
                 border-right: 1px solid #f5f5f5;
                 p {
-                    width: 208px;
+                    width: 206px;
                     height: 45px;
                     margin-bottom: 20px;
                     text-align: center;
                     line-height: 45px;
                     font-size: 18px;
                     color: #666;
+                    cursor: pointer;
                 }
                 p:hover {
                     background-color: #f5f5f5;
@@ -374,6 +379,7 @@
         .transition03_wrap {
             width: 100%;
             background-color: #FFFBF3;
+            position: relative;
             .transition03 {
                 width: 1120px;
                 margin: 0 auto;
@@ -383,32 +389,63 @@
                 100%);
                 overflow: hidden;
                 margin-top: 100px;
-                position: relative;
                 height: 967px;
                 h3 {
                     margin-top: 60px;
                 }
-                button {
-                    @include center-block;
+                .butn {
+                    position: absolute;
                     width: 338px;
                     height: 66px;
                     border-radius: 14px;
                     background: none;
                     color: #f56523;
                     font-size: 18px;
-                    margin-bottom: 40px;
+                    transition: all 1s;
+                    bottom: 40px;
+                    left: 0;
+                    cursor: pointer;
+                    @include backgroundset("../../images/index/ic_car.png",
+                    center,
+                    center,
+                    40%);
+                    .app {
+                        position: absolute;
+                        width: 200px;
+                        height: 140px;
+                        @include backgroundset("../../images/index/ic_bubble.png",
+                        center,
+                        center,
+                        100%);
+                        transform: scale(0);
+                        right: -40px;
+                        text-align: center;
+                        line-height: 140px;
+                        margin: auto;
+                        transition: all .6s;
+                        bottom: 35px;
+                        .apim {
+                            @include center-block;
+                            width: 100px;
+                            height: 100px;
+                            @include backgroundset("../../images/index/land02.jpg",
+                            center,
+                            center,
+                            100%);
+                            opacity: 0;
+                        }
+                    }
                 }
-                .app {
-                    @include center-block;
-                    width: 140px;
-                    height: 140px;
-                    @include backgroundset("../../images/index/app.jpg",
-                    center,
-                    center,
-                    100%);
-                    opacity: 0;
-                    transition: all .6s;
-                    margin-bottom: 80px;
+                .butn:hover {
+                    .app {
+                        opacity: 1;
+                        .txt {
+                            display: none;
+                        }
+                        .apim {
+                            opacity: 1;
+                        }
+                    }
                 }
             }
         }

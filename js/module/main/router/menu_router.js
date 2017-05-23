@@ -23,7 +23,7 @@ HJY.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "$httpP
             controller: "help",
             templateUrl: "html/help/help.html" + v,
         })
-    $urlRouterProvider.otherwise("error");
+    $urlRouterProvider.otherwise("index");
 }]);
 HJY.run(['$rootScope', function($rootScope) {
     if (location.hostname == "www.ihaomu.com") {

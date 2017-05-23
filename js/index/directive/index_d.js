@@ -21,12 +21,26 @@ angular.module('HJY').directive("allL", function($timeout) {
                     $(".left_p").css({ left: "-1000px" })
                     $(".right_p").css({ right: "-1000px" })
                 }
+                if (h > 1800) {
+                    $(".transition03 .butn").css({ left: "40%" })
+                    setTimeout(function() {
+                        $(".transition03 .butn .app").css({ transform: 'scale(1)' })
+                    }, 1100)
+                } else {
+                    $(".transition03 .butn").css({ left: "0" })
+                    $(".transition03 .butn .app").css({ transform: 'scale(0)' })
+                }
             })
-            $(".btn").mouseenter(function() {
-                $(".transition03 .app").css({ opacity: "1" })
-            })
-            $(".btn").mouseout(function() {
-                $(".transition03 .app").css({ opacity: "0" })
+            var flag = 1;
+            $(".transition03 .butn").click(function() {
+                flag == 1 ? flag = 0 : flag = 1
+                if (flag == 0) {
+                    $(".transition03 .txt").css({ display: "none" });
+                    $(".transition03 .apim").css({ opacity: "1" });
+                } else {
+                    $(".transition03 .txt").css({ display: "inline" });
+                    $(".transition03 .apim").css({ opacity: "0" });
+                }
             })
         }
     }
@@ -45,3 +59,15 @@ angular.module('HJY').directive("indexFooter", function($timeout) {
         templateUrl: "html/index/footer.html"
     }
 })
+angular.module('HJY').directive('onFinishRenderFilters', function($timeout) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attr) {
+            if (scope.$last === true) {
+                $timeout(function() {
+                    scope.$emit('ngRepeatFinished');
+                });
+            }
+        }
+    };
+});
