@@ -1,6 +1,6 @@
 ;
 HJY.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "$httpProvider", function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-    window.version_glo = "1.0";
+    window.version_glo = "1.0.1";
     var v = "?" + window.version_glo;
     $stateProvider.state("index", {
             url: "/index",

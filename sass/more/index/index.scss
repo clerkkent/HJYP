@@ -18,7 +18,6 @@
                 font-size: 12px;
                 color: #999999;
                 .left {
-                    cursor: pointer;
                     i {
                         display: inline-block;
                         width: 30px;
@@ -87,7 +86,7 @@
                         display: none;
                         opacity: 0;
                         transform: scale(0);
-                        @include backgroundset("../../images/index/titleapp.jpg", center, bottom, 100%)
+                        @include backgroundset("../../images/index/app1.jpg", center, bottom, 100%)
                     }
                 }
                 .app:hover {
@@ -231,11 +230,13 @@
             }
         }
         .banner_wrap {
-            width: 1910px;
+            width: auto;
+            min-width: 1265px;
             height: 408px;
             z-index: 1;
             @include backgroundset("../../images/index/banner.png", center, center, 100%);
             background-color: rgba(black, .9);
+            background-size: auto 408px;
             .banner {
                 height: 100%;
                 margin: 0 auto;
@@ -292,12 +293,12 @@
                     justify-content: space-between;
                     margin-top: 35px;
                     li {
-                        width: 150px;
+                        width: 190px;
                         height: 200px;
                         transition: all 0.4s;
                         transform: rotate(0deg);
                         // margin-top: -1000px;
-                        @include backgroundset("../../images/index/ic_Package.png", center, center, 100%);
+                        @include backgroundset("../../images/index/ic_Package.png", center, center, 70%);
                         .pic {
                             height: 145px;
                             width: 145px;
@@ -306,12 +307,12 @@
                         }
                         .text {
                             font-family: PingFangSC-Regular;
-                            font-size: 22px;
+                            font-size: 18px;
                             color: #7A7A7A;
                             letter-spacing: 0;
                             text-align: center;
                             width: 150px;
-                            margin-top: 35px;
+                            margin-top: 55px;
                         }
                     }
                     li:hover {
@@ -373,6 +374,7 @@
                     width: 389px;
                     height: 53px;
                     left: 165px;
+                    line-height: 30px;
                 }
             }
         }
@@ -428,7 +430,7 @@
                             @include center-block;
                             width: 100px;
                             height: 100px;
-                            @include backgroundset("../../images/index/land02.jpg",
+                            @include backgroundset("../../images/index/Rectangle 10.png",
                             center,
                             center,
                             100%);
@@ -502,7 +504,9 @@
                     @include backgroundset("../../images/index/app1.jpg",
                     center,
                     center,
-                    100%);
+                    90%);
+                    background-color: #FFF;
+                    border-radius: 8%;
                     top: 34px;
                 }
                 .downtxt {
