@@ -3,7 +3,7 @@ HJY.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "$httpP
     window.version_glo = "1.0.1";
     var v = "?" + window.version_glo;
     $stateProvider.state("index", {
-            url: "/index",
+            url: "",
             controller: "index",
             templateUrl: "html/index/index.html" + v,
             resolve: {
@@ -23,15 +23,19 @@ HJY.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "$httpP
             controller: "help",
             templateUrl: "html/help/help.html" + v,
         })
+        .state("index.index", {
+            url: "/index",
+            controller: "index1",
+            templateUrl: "html/index/index1.html" + v,
+        })
     $urlRouterProvider.otherwise("index");
 }]);
 HJY.run(['$rootScope', function($rootScope) {
-    if (location.hostname == "www.ihaomu.com") {
+    if (location.hostname == "www.ihaomu.com" || location.hostname == "www.ihuijiayou.com") {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?fdb9e557f9cc49a60c8ed0c30b13a40e";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     }
-    // $rootScope.url_global = "http://192.168.11.179:8888";
     $rootScope.url_global = "http://" + location.hostname; //本地测试
 }]);

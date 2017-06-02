@@ -28,3 +28,18 @@ angular.module('HJY').controller("help", ["$scope", "$state", "$http", function(
         $('html body .main_content').scrollTop(0);
     })
 }]);
+angular.module('HJY').controller("index1", ["$scope", "$state", "$http", function($scope, $state, $http) {
+    // $(".main_content").scroll(function() {
+    //     var h = $(".main_content").scrollTop();
+    //     console.log(h)
+    //     if (h > 900) {
+    //         $(".transition03 .butn").css({ left: "40%" })
+    //         setTimeout(function() {
+    //             $(".transition03 .butn .app").css({ transform: 'scale(1)' })
+    //         }, 1100)
+    //     } else {
+    //         $(".transition03 .butn").css({ left: "40%" })
+    //         $(".transition03 .butn .app").css({ transform: 'scale(0)' })
+    //     }
+    // })
+}])
